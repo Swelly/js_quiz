@@ -11,8 +11,22 @@ var quiz = {};
 // You can sleep in if it is not a weekday or if you are on vacation.
 // quiz.sleepIn() => false
 // quiz.sleepIn({vacation: true}) => true
-quiz.sleepIn = function(options) {
-}
+quiz.sleepIn = function (options) {
+  var today = "thursday";
+  var vacation;
+  options = {
+     vacation: true
+  };
+
+  if (vacation === true) {
+    return true;
+  } else if (today != "saturday" || "sunday") {
+    return false;
+  } else {
+    return true;
+  }
+
+}; // Not working but this is what I did.
 
 // Question 2: function called nearHundred
 //////////////
@@ -21,6 +35,20 @@ quiz.sleepIn = function(options) {
 // quiz.nearHundred(52) => false
 // quiz.nearHundred(93) => false
 // quiz.nearHundred('two') => Error: Please enter a number!
+quiz.nearHundred = function (number) {
+  // crap
+  number = parseInt();
+  if(number === String ) {
+    alert("Error: Please enter a number");
+  } else if(number > 90 && number < 100) {
+    return true;
+  } else {
+    return false;
+  }
+
+};
+
+
 
 // Question 3: a function called missingChar
 //////////////
